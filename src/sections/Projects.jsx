@@ -1,6 +1,6 @@
 // src/sections/Projects.jsx
 import React, { useState } from "react";
-import "../styles/projects.css";
+import "../styles/Projects.css";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"; // ✅ Icons
 
 const projectsData = [
