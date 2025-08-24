@@ -1,0 +1,174 @@
+/* Section */
+.projects {
+  padding: 56px 20px;
+  background: #262735;
+  width: 100%;
+
+  /* 🔥 Fixes */
+  min-height: 100vh;       /* ensures full screen height per section */
+  box-sizing: border-box;  /* padding included in height calc */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Title */
+.projects-title {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.projects-subtitle {
+  text-align: center;
+  color: #6b7280; /* gray-500 */
+  margin-bottom: 38px;
+  font-size: 1.05rem;
+}
+
+/* Grid — exactly 2 cards per row on desktop */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+  flex-grow: 1; /* 🔥 ensures grid pushes footer (See More) down */
+}
+
+/* Card */
+.project-card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;                /* so image corners are clipped */
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  transition: transform .25s ease, box-shadow .25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0,0,0,0.12);
+}
+
+/* Image on top */
+.project-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Content */
+.card-body {
+  padding: 18px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Tech pills row */
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  box-shadow: inset 0 -2px rgba(255,255,255,0.5);
+}
+
+/* Colorful pills (match screenshot vibes) */
+.pill-html { background:#ffe4e1; color:#d04b33; }
+.pill-css { background:#e6efff; color:#3b6ee7; }
+.pill-javascript { background:#fff4c2; color:#b58900; }
+.pill-openweather-api { background:#e8f7ff; color:#0077b6; }
+.pill-react { background:#e8fbff; color:#0ea5e9; }
+.pill-bootstrap { background:#efe6ff; color:#6b3fd6; }
+.pill-python { background:#e9f7ef; color:#1f7a4c; }
+
+/* Description */
+.project-desc {
+  color: #4b5563; /* gray-600 */
+  line-height: 1.6;
+}
+
+/* Optional expanded bullet points */
+.project-details {
+  margin-left: 18px;
+  color: #4b5563;
+  line-height: 1.5;
+}
+
+/* Footer actions */
+.card-actions {
+  margin-top: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.read-more {
+  background: transparent;
+  border: none;
+  color: #2563eb;     /* blue-600 */
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.read-more:hover { text-decoration: underline; }
+
+/* Icon buttons (GitHub / Live) */
+.link-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.icon-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  color: #111827;
+  background: #f3f4f6;
+  transition: background .2s, transform .2s;
+}
+
+.icon-btn:hover { background:#e5e7eb; transform: translateY(-1px); }
+
+/* See more */
+.see-more {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 40px; /* 🔥 extra breathing room at bottom */
+}
+
+.see-more-btn {
+  background: #111827;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  padding: 12px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background .2s;
+}
+.see-more-btn:hover { background:#374151; }
+
+/* Responsive: 1 column on small screens */
+@media (max-width: 900px) {
+  .projects-grid { grid-template-columns: 1fr; }
+}

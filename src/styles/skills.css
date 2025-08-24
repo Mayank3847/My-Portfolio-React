@@ -1,0 +1,260 @@
+.skills {
+  width: 100%;
+
+  background: #262735;
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.skills-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.skills-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #dadddf;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 80px;
+  height: 4px;
+  background: #4285F4;
+  border-radius: 2px;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #c1cbd4;
+}
+
+.skill-percentage {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #4285F4;
+}
+
+.skill-bar {
+  height: 12px;
+  background: #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.skill-progress {
+  height: 100%;
+  width: 0%;
+  transition: width 1.8s ease-in-out;
+  border-radius: 8px;
+  position: relative;
+}
+
+.skill-progress.animate {
+  animation: skillAnimation 1.8s ease-in-out;
+}
+
+@keyframes skillAnimation {
+  0% {
+    width: 0%;
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Skills Image - Laptop Mockup */
+.skills-image {
+  height: 300px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.laptop-mockup {
+  width: 100%;
+  max-width: 500px;
+  transform: rotateY(-5deg) rotateX(5deg);
+  transition: transform 0.3s ease;
+}
+
+.laptop-mockup:hover {
+  transform: rotateY(-2deg) rotateX(2deg) scale(1.02);
+}
+
+.laptop-screen {
+  background: #1e1e1e;
+  border-radius: 12px 12px 0 0;
+  padding: 1rem;
+  box-shadow: 
+    0 0 0 8px #2c3e50,
+    0 0 0 12px #34495e,
+    0 20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.laptop-screen::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  right: -20px;
+  height: 20px;
+  background: linear-gradient(to bottom, #34495e, #2c3e50);
+  border-radius: 0 0 20px 20px;
+}
+
+.code-editor {
+  background: #0d1117;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.editor-header {
+  background: #21262d;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #30363d;
+}
+
+.editor-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.btn.red { background: #ff5f56; }
+.btn.yellow { background: #ffbd2e; }
+.btn.green { background: #27ca3f; }
+
+.code-content {
+  padding: 1.5rem;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.code-line {
+  display: block;
+  margin-bottom: 0.3rem;
+  white-space: nowrap;
+}
+
+.code-keyword { color: #ff79c6; }
+.code-function { color: #50fa7b; }
+.code-variable { color: #8be9fd; }
+.code-string { color: #f1fa8c; }
+.code-bracket { color: #f8f8f2; }
+.code-operator { color: #ff79c6; }
+.code-punctuation { color: #f8f8f2; }
+.code-indent { color: transparent; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .skills-wrapper {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  .laptop-mockup {
+    max-width: 400px;
+    transform: none;
+  }
+  
+  .laptop-mockup:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media (max-width: 768px) {
+  .skills {
+    padding: 3rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .section-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .skills-wrapper {
+    gap: 2rem;
+  }
+  
+  .laptop-mockup {
+    max-width: 350px;
+  }
+  
+  .code-content {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skill-name {
+    font-size: 1rem;
+  }
+  
+  .skill-percentage {
+    font-size: 0.9rem;
+  }
+  
+  .skill-bar {
+    height: 10px;
+  }
+  
+  .code-content {
+    font-size: 0.75rem;
+  }
+}

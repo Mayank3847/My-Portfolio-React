@@ -1,0 +1,84 @@
+/* --------------------------
+   ✅ Existing Styles
+--------------------------- */
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+/* Global background and text color */
+html,body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background: #0a0f2c;  /* ✅ dark navy */
+  color: #ffffff;       /* ✅ white text */
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* --------------------------
+   ✅ New Additions
+--------------------------- */
+
+/* Smooth scroll for navbar links */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* equal to navbar height */
+}
+
+/* General section styling */
+section {
+  scroll-margin-top: 100px; /* ensures section titles are not hidden */
+  padding: 80px 20px;       /* spacing inside each section */
+  min-height: 100vh;        /* full screen height */
+  box-sizing: border-box;
+}
+
+/* Home Section */
+#home {
+  height: 100vh;            /* full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f9fa;      /* light background */
+  padding: 2rem;
+}
