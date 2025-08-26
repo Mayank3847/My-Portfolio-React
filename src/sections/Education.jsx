@@ -22,7 +22,7 @@ const educationData = [
     institution: "Government Polytechnic Barauni Begusarai",
     details: [
       "CGPA: 8.3",
-      "Subjects: Web Development, Software Engineering, PHP, Python",
+      "Subjects: Web Development, Software Engineering, Python",
       "Top Skills: HTML, CSS",
       "Sports: Captain in Cricket, Vice-Captain in Volleyball"
     ],

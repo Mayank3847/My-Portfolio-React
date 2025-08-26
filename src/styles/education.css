@@ -6,12 +6,12 @@
   padding: 4rem 2rem;
   min-height: 100vh;
   width: 100%;
-
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .section-title {
   text-align: center;
-  font-size: 3rem;
+  font-size: clamp(2rem, 5vw, 3rem); /* Responsive font size */
   font-weight: 900;
   margin-bottom: 4rem;
   color: #d6dadf;
@@ -22,8 +22,9 @@
 .timeline {
   position: relative;
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: min(1000px, 100%); /* Responsive max-width */
   padding: 2rem 0;
+  width: 100%;
 }
 
 /* Vertical line */
@@ -64,10 +65,11 @@
   border-radius: 12px;
   padding: 2rem;
   width: 100%;
-  max-width: 550px;
-  min-width: 480px;
+  max-width: min(550px, calc(100vw - 120px)); /* Responsive max-width */
+  min-width: 0; /* Remove fixed min-width */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .timeline-content:hover {
@@ -83,24 +85,27 @@
   align-items: flex-start;
   margin-bottom: 1rem;
   gap: 1rem;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 .education-title {
-  font-size: 1.3rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
   font-weight: 700;
   color: #2c3e50;
   margin: 0;
   line-height: 1.3;
   flex: 1;
+  min-width: 200px;
 }
 
 .education-duration {
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2vw, 1rem);
   font-weight: 600;
   color: #4a90e2;
   margin: 0;
   text-align: right;
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 /* Education body */
@@ -111,7 +116,7 @@
 }
 
 .education-subtitle {
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
   font-weight: 600;
   color: #2c3e50;
   margin: 0 0 0.3rem 0;
@@ -119,7 +124,7 @@
 }
 
 .education-institution {
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
   color: #7f8c8d;
   font-weight: 500;
   margin: 0 0 0.8rem 0;
@@ -130,19 +135,22 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+  align-items: flex-start;
 }
 
-/* ✅ Rectangular detail items (no pill/oval shapes) */
+/* Detail items */
 .detail-item {
   background: #0077ff;
   color: #fff;
   padding: 6px 12px;
-  border-radius: 6px;  /* small rounded corners */
-  font-size: 0.9rem;
+  border-radius: 6px;
+  font-size: clamp(0.8rem, 1.8vw, 0.9rem);
   font-weight: 500;
   display: inline-block;
   margin: 2px 0;
   line-height: 1.5;
+  word-break: break-word;
+  flex: 0 0 auto;
 }
 
 /* Timeline dots */
@@ -161,13 +169,24 @@
 }
 
 /* Responsive Design */
+@media (max-width: 992px) {
+  .timeline-content {
+    max-width: min(480px, calc(100vw - 100px));
+    padding: 1.8rem;
+  }
+  
+  .education-title {
+    font-size: 1.25rem;
+    min-width: 180px;
+  }
+}
+
 @media (max-width: 768px) {
   .education {
     padding: 2rem 1rem;
   }
 
   .section-title {
-    font-size: 2.5rem;
     margin-bottom: 3rem;
   }
 
@@ -189,40 +208,301 @@
   }
 
   .timeline-content {
-    max-width: 100%;
-    min-width: auto;
+    max-width: calc(100vw - 80px);
+    min-width: 0;
     padding: 1.5rem;
   }
 
-  .education-title {
-    font-size: 1.3rem;
+  .education-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
-  .education-subtitle {
-    font-size: 1.1rem;
+  .education-duration {
+    text-align: left;
+    align-self: flex-start;
+  }
+
+  .education-title {
+    min-width: 0;
   }
 }
 
 @media (max-width: 480px) {
+  .education {
+    padding: 2rem 0.5rem;
+  }
+
   .section-title {
-    font-size: 2rem;
     letter-spacing: 1px;
   }
 
-  .education-header {
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 45px;
+    padding-right: 0.5rem;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-dot {
+    left: 20px;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 2px #34495e;
+  }
+
+  .timeline-content {
+    max-width: calc(100vw - 55px);
     padding: 1rem;
   }
 
-  .education-body {
-    padding: 1rem;
+  .education-details {
+    gap: 0.3rem;
+  }
+
+  .detail-item {
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    word-break: break-all;
+  }
+}
+
+@media (max-width: 400px) {
+  .education {
+    padding: 2rem 0.3rem;
+  }
+
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 40px;
+    padding-right: 0.3rem;
+  }
+
+  .timeline::before {
+    left: 18px;
+  }
+
+  .timeline-dot {
+    left: 18px;
+    width: 12px;
+    height: 12px;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 1px #34495e;
+  }
+
+  .timeline-content {
+    max-width: calc(100vw - 50px);
+    padding: 0.8rem;
+  }
+
+  .education-header {
+    gap: 0.3rem;
   }
 
   .education-title {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    line-height: 1.2;
   }
 
   .education-duration {
+    font-size: 0.85rem;
+  }
+
+  .education-subtitle {
     font-size: 1rem;
+  }
+
+  .education-institution {
+    font-size: 0.8rem;
+  }
+
+  .detail-item {
+    padding: 3px 6px;
+    font-size: 0.7rem;
+    margin: 1px;
+  }
+}
+
+@media (max-width: 360px) {
+  .education {
+    padding: 1.5rem 0.25rem;
+  }
+
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 35px;
+    padding-right: 0.25rem;
+  }
+
+  .timeline::before {
+    left: 15px;
+    width: 2px;
+  }
+
+  .timeline-dot {
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 0 1px #34495e;
+  }
+
+  .timeline-content {
+    max-width: calc(100vw - 45px);
+    padding: 0.7rem;
+  }
+
+  .education-title {
+    font-size: 1rem;
+  }
+
+  .education-duration {
+    font-size: 0.8rem;
+  }
+
+  .education-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .education-institution {
+    font-size: 0.75rem;
+  }
+
+  .detail-item {
+    padding: 2px 4px;
+    font-size: 0.65rem;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 320px) {
+  .education {
+    padding: 1.5rem 0.2rem;
+  }
+
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 30px;
+    padding-right: 0.2rem;
+  }
+
+  .timeline::before {
+    left: 12px;
+    width: 2px;
+  }
+
+  .timeline-dot {
+    left: 12px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 0 1px #34495e;
+  }
+
+  .timeline-content {
+    max-width: calc(100vw - 35px);
+    padding: 0.6rem;
+    border-radius: 8px;
+  }
+
+  .education-title {
+    font-size: 0.95rem;
+  }
+
+  .education-duration {
+    font-size: 0.75rem;
+  }
+
+  .education-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .education-institution {
+    font-size: 0.7rem;
+  }
+
+  .detail-item {
+    padding: 2px 3px;
+    font-size: 0.6rem;
+    border-radius: 3px;
+    line-height: 1.3;
+  }
+}
+
+@media (max-width: 280px) {
+  .education {
+    padding: 1rem 0.15rem;
+  }
+
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    padding-left: 25px;
+    padding-right: 0.15rem;
+    margin-bottom: 3rem;
+  }
+
+  .timeline::before {
+    left: 10px;
+    width: 1px;
+  }
+
+  .timeline-dot {
+    left: 10px;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #ffffff;
+    box-shadow: none;
+    background: #34495e;
+  }
+
+  .timeline-content {
+    max-width: calc(100vw - 30px);
+    padding: 0.5rem;
+    border-radius: 6px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5px;
+  }
+
+  .education-title {
+    font-size: 0.9rem;
+    line-height: 1.1;
+  }
+
+  .education-duration {
+    font-size: 0.7rem;
+  }
+
+  .education-subtitle {
+    font-size: 0.85rem;
+  }
+
+  .education-institution {
+    font-size: 0.65rem;
+  }
+
+  .detail-item {
+    padding: 1px 2px;
+    font-size: 0.55rem;
+    border-radius: 2px;
+    margin: 0.5px;
+  }
+
+  .education-body {
+    gap: 0.7rem;
   }
 }
 
@@ -240,5 +520,41 @@
 
   .section-title {
     font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .education {
+    padding: 5rem 3rem;
+  }
+  
+  .timeline {
+    max-width: 1400px;
+  }
+  
+  .timeline-content {
+    max-width: 650px;
+    padding: 2.5rem;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 2560px) {
+  .education {
+    padding: 6rem 4rem;
+  }
+  
+  .section-title {
+    font-size: 4rem;
+    margin-bottom: 5rem;
+  }
+  
+  .timeline {
+    max-width: 1600px;
+  }
+  
+  .timeline-content {
+    max-width: 700px;
+    padding: 3rem;
   }
 }
