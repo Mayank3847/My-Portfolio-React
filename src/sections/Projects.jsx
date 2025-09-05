@@ -21,6 +21,27 @@ const projectsData = [
     live: "https://mayank3847.github.io/Weather_App_React/",
   },
   {
+  title: "Quiz Web App",
+  image: "/assets/quiz-app.png",
+  tech: ["React.js", "React Router", "JavaScript", "CSS", "HTML"],
+  short:
+    "Interactive quiz application with timer, multiple-choice questions, results evaluation, and fallback offline mode.",
+  details: [
+    "Start quiz with multiple-choice questions",
+    "Timer-based quiz with countdown for each question",
+    "Dynamic progress bar showing question progress",
+    "Fallback questions if API is unavailable",
+    "Results page showing score and answers summary",
+    "Navigation with React Router (Home, Quiz, Results)",
+    "Reusable components for Navbar, QuestionCard, and Timer",
+    "Responsive design for mobile and desktop",
+    "State management with React Hooks (useState, useEffect)",
+  ],
+  github: "https://github.com/Mayank3847/Quiz-App",
+  live: "https://mayank3847-quiz-app.netlify.app/",
+}
+,
+  {
     title: "Real-Time Polling Platform",
     image: "/assets/realtime-poll.jpeg",
     tech: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"],
