@@ -21,6 +21,36 @@ const projectsData = [
     live: "https://mayank3847.github.io/Weather_App_React/",
   },
   {
+  title: "Shopping Cart Web App",
+  image: "/assets/shopping-cart.webp",
+  tech: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT Authentication",
+    "CSS",
+    "REST API"
+  ],
+  short:
+    "Full-stack shopping cart system where users can sign up, log in, browse items, add to cart, checkout, and view order history.",
+  details: [
+    "User signup and login with JWT authentication",
+    "Single active login token per user (secure session handling)",
+    "Add items to cart and view cart contents",
+    "Checkout converts cart into an order",
+    "Order history with all past orders",
+    "Backend built with Node.js + Express.js + MongoDB",
+    "Protected routes using custom auth middleware",
+    "Frontend built in React with clean UI and plain CSS",
+    "Fully responsive user interface",
+    "Deployed backend and frontend separately on cloud",
+  ],
+  github: "https://github.com/Mayank3847/shopping-cart", 
+  live: "https://692220cedf115075551bccbc--shopping-cart-frontend-1.netlify.app/"
+},
+
+  {
   title: "Quiz Web App",
   image: "/assets/quiz-app.png",
   tech: ["React.js", "React Router", "JavaScript", "CSS", "HTML"],
