@@ -22,7 +22,7 @@ const projectsData = [
   },
   {
   title: "Shopping Cart Web App",
-  image: "/assets/shopping-cart.webp",
+  image: "/assets/shopping_cart.jpg",
   tech: [
     "React.js",
     "Node.js",
