@@ -7,13 +7,13 @@ export default function Hero() {
   // ✅ Absolute path to the PDF in Vite (public/). Must match the filename EXACTLY.
   //    If your deploy uses a non-root base, import.meta.env.BASE_URL keeps it working.
   const RESUME_PATH =
-    `${import.meta.env?.BASE_URL ?? "/"}Mayank_Shekahr_Resume.pdf`;
+    `${import.meta.env?.BASE_URL ?? "/"}Mayank_Shekhar_Resume.pdf`;
 
   // Function to handle resume download
   const handleResumeDownload = () => {
     const link = document.createElement("a");
     link.href = RESUME_PATH; // ✅ points to public/Mayank_Shekahr_Resume.pdf
-    link.download = "Mayank_Shekahr_Resume.pdf";
+    link.download = "Mayank_Shekhar_Resume.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
