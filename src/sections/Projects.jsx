@@ -5,22 +5,48 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"; // ✅ Icons
 
 const projectsData = [
   {
-    title: "Weather Web App",
-    image: "/assets/weather-app.webp",
-    tech: ["React.js", "OpenWeatherMap API", "CSS", "HTML"],
-    short:
-      "Real-time weather updates with search by city, showing temp, humidity, wind, and dynamic icons.",
-    details: [
-      "Search weather by city",
-      "Displays temperature, humidity, wind speed",
-      "Dynamic icons for weather conditions",
-      "Responsive UI for all devices",
-      "State management with React Hooks",
-    ],
-    github: "https://github.com/Mayank3847/Weather_App_React",
-    live: "https://mayank3847.github.io/Weather_App_React/",
-  },
-  {
+  title: "TaskManager - Collaborative Task Management System",
+  image: "/assets/taskmanager.jpg",
+  tech: [
+    "React.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Socket.io",
+    "JWT Authentication",
+    "Tailwind CSS",
+    "React Query",
+    "Zod Validation"
+  ],
+  short:
+    "Full-stack collaborative task management application with real-time updates where users can create, assign, track tasks, receive instant notifications, and manage team workflows efficiently.",
+  details: [
+    "User registration and login with JWT authentication and HttpOnly cookies",
+    "Complete CRUD operations for tasks with role-based access control",
+    "Real-time task updates using Socket.io WebSocket connections",
+    "Task assignment system with instant in-app notifications",
+    "Advanced filtering by status (To Do, In Progress, Review, Completed) and priority (Low, Medium, High, Urgent)",
+    "Dynamic sorting by due date and creation date",
+    "Personal dashboard with statistics cards showing assigned tasks, created tasks, and overdue tasks",
+    "Only task creators can delete tasks (authorization middleware)",
+    "Persistent notification system with read/unread status tracking",
+    "Backend built with Node.js + Express.js + MongoDB using Service/Repository pattern",
+    "Frontend built with React + TypeScript + Vite with 20+ reusable components",
+    "Form validation using React Hook Form and Zod schemas on both client and server",
+    "Protected routes and API endpoints with custom auth middleware",
+    "Fully responsive UI with Tailwind CSS (mobile to 4K screens)",
+    "Optimistic UI updates and caching with React Query/TanStack Query",
+    "Toast notifications for user feedback and loading skeleton states",
+    "Unit tests with Jest achieving 80%+ code coverage",
+    "MongoDB database with 3 collections (Users, Tasks, Notifications) and proper indexing",
+    "Deployed frontend on Netlify and backend on Render with MongoDB Atlas",
+    "Comprehensive API documentation with 15+ RESTful endpoints"
+  ],
+  github: "https://github.com/Mayank3847/task-manager-fullstack-combined.git",
+  live: "https://task-manager-app-ms.netlify.app/"
+},
+ {
   title: "Shopping Cart Web App",
   image: "/assets/shopping_cart.jpg",
   tech: [
@@ -49,6 +75,38 @@ const projectsData = [
   github: "https://github.com/Mayank3847/shopping-cart", 
   live: "https://692220cedf115075551bccbc--shopping-cart-frontend-1.netlify.app/"
 },
+{
+    title: "Real-Time Polling Platform",
+    image: "/assets/realtime-poll.jpeg",
+    tech: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"],
+    short:
+      "A full-stack polling app with real-time vote updates using WebSockets.",
+    details: [
+      "Admins create polls with unique session codes",
+      "Users join and vote live",
+      "Real-time synchronization via Socket.IO",
+      "MongoDB for storing poll data",
+    ],
+    github: "https://github.com/Mayank3847/real-time-poll-combined",
+    live: "https://695eca117d8d5a0008fa7eda--polling-app-ms7295.netlify.app/",
+  },
+  {
+    title: "Weather Web App",
+    image: "/assets/weather-app.webp",
+    tech: ["React.js", "OpenWeatherMap API", "CSS", "HTML"],
+    short:
+      "Real-time weather updates with search by city, showing temp, humidity, wind, and dynamic icons.",
+    details: [
+      "Search weather by city",
+      "Displays temperature, humidity, wind speed",
+      "Dynamic icons for weather conditions",
+      "Responsive UI for all devices",
+      "State management with React Hooks",
+    ],
+    github: "https://github.com/Mayank3847/Weather_App_React",
+    live: "https://mayank3847.github.io/Weather_App_React/",
+  },
+ 
 
   {
   title: "Quiz Web App",
@@ -71,21 +129,7 @@ const projectsData = [
   live: "https://mayank3847-quiz-app.netlify.app/",
 }
 ,
-  {
-    title: "Real-Time Polling Platform",
-    image: "/assets/realtime-poll.jpeg",
-    tech: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"],
-    short:
-      "A full-stack polling app with real-time vote updates using WebSockets.",
-    details: [
-      "Admins create polls with unique session codes",
-      "Users join and vote live",
-      "Real-time synchronization via Socket.IO",
-      "MongoDB for storing poll data",
-    ],
-    github: "https://github.com/Mayank3847/Real-Time-Interaction",
-    live: "https://github.com/Mayank3847/Real-Time-Interaction",
-  },
+  
   {
     title: "Portfolio Website",
     image: "/assets/portfolio.png",
