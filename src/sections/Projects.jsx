@@ -76,6 +76,44 @@ const projectsData = [
   live: "https://692220cedf115075551bccbc--shopping-cart-frontend-1.netlify.app/"
 },
 {
+  title: "GigFlow – Freelance Hiring Platform",
+  image: "/assets/gigflow.png",
+  tech: [
+    "React.js",
+    "Redux Toolkit",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT Authentication",
+    "Socket.io",
+    "REST API",
+    "Tailwind CSS"
+  ],
+  short:
+    "Full-stack freelance hiring platform where clients post gigs, freelancers bid in real time, and hiring decisions trigger instant notifications.",
+  details: [
+    "User authentication with JWT and HttpOnly cookies",
+    "Role-based system: client (gig owner) and freelancer",
+    "Clients can post gigs with title, description, and budget",
+    "Freelancers can browse gigs and submit bids",
+    "Only gig owners can view bids on their posted gigs",
+    "Atomic hire logic ensures only one freelancer can be hired per gig",
+    "Hire and reject actions update gig and bid status securely",
+    "Real-time notifications using Socket.io for bids, hire, and rejection",
+    "Notification bell with unread count and persistence per user",
+    "Session-safe authentication handling on refresh and redeploy",
+    "Protected routes using custom auth middleware",
+    "Optimistic UI updates for hire/reject actions",
+    "Frontend built with React + Redux Toolkit for state management",
+    "Backend built with Node.js, Express.js, and MongoDB",
+    "Fully responsive UI with clean, production-ready design",
+    "Frontend and backend deployed separately on cloud platforms",
+  ],
+  github: "https://github.com/Mayank3847/gigflow-platform",
+  live: "https://gigflow-platform-ms7295.netlify.app"
+},
+
+{
     title: "Real-Time Polling Platform",
     image: "/assets/realtime-poll.jpeg",
     tech: ["React", "Node.js", "Express", "MongoDB", "Socket.IO"],
