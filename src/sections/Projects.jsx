@@ -5,6 +5,132 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa"; // ✅ Icons
 
 const projectsData = [
   {
+  title: "GigFlow – Freelance Hiring Platform",
+  image: "/assets/gigflow.png",
+  tech: [
+    "React.js",
+    "Redux Toolkit",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT Authentication",
+    "Socket.io",
+    "REST API",
+    "Tailwind CSS"
+  ],
+  short:
+    "Full-stack freelance hiring platform where clients post gigs, freelancers bid in real time, and hiring decisions trigger instant notifications.",
+  details: [
+    "User authentication with JWT and HttpOnly cookies",
+    "Role-based system: client (gig owner) and freelancer",
+    "Clients can post gigs with title, description, and budget",
+    "Freelancers can browse gigs and submit bids",
+    "Only gig owners can view bids on their posted gigs",
+    "Atomic hire logic ensures only one freelancer can be hired per gig",
+    "Hire and reject actions update gig and bid status securely",
+    "Real-time notifications using Socket.io for bids, hire, and rejection",
+    "Notification bell with unread count and persistence per user",
+    "Session-safe authentication handling on refresh and redeploy",
+    "Protected routes using custom auth middleware",
+    "Optimistic UI updates for hire/reject actions",
+    "Frontend built with React + Redux Toolkit for state management",
+    "Backend built with Node.js, Express.js, and MongoDB",
+    "Fully responsive UI with clean, production-ready design",
+    "Frontend and backend deployed separately on cloud platforms",
+  ],
+  github: "https://github.com/Mayank3847/gigflow-platform",
+  live: "https://gigflow-platform-ms7295.netlify.app"
+},
+{
+  title: "Sydney Event Scraper - Event Discovery & Management Platform",
+  image: "/assets/sydney-events.png",
+  tech: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Puppeteer",
+    "Google OAuth 2.0",
+    "JWT Authentication",
+    "Tailwind CSS",
+    "Nodemailer",
+    "Node-cron",
+    "Passport.js",
+    "Mongoose ODM",
+    "Gmail SMTP",
+    "Axios",
+    "React Router"
+  ],
+  short: "Full-stack event aggregation platform that automatically scrapes events from multiple sources, provides email OTP verification for ticket access, and features an admin dashboard for event management with real-time status tracking.",
+  details: [
+    "Automated web scraping from Eventbrite and Timeout Sydney using Puppeteer with headless browser",
+    "Scheduled scraping every 6 hours using Node-cron for automatic event updates",
+    "Intelligent event detection system marking events as new, updated, inactive, or imported",
+    "Email OTP verification system with 6-digit codes for secure ticket access",
+    "Beautiful HTML email templates sent via Nodemailer with Gmail SMTP integration",
+    "OTP expires in 10 minutes with automatic database cleanup using MongoDB TTL indexes",
+    "Resend OTP functionality with 60-second countdown timer for better UX",
+    "Google OAuth 2.0 authentication with Passport.js for admin access",
+    "Complete CRUD operations for events with role-based authorization middleware",
+    "Admin dashboard with real-time statistics showing total, new, updated, and imported events",
+    "Advanced filtering by city, status, category, keyword search, and date range",
+    "Table view with sortable columns and click-to-preview detailed event panel",
+    "Import to platform functionality with notes and timestamp tracking",
+    "Email capture system with consent checkbox for GDPR compliance",
+    "Event status management system (new/updated/inactive/imported) with color-coded badges",
+    "MongoDB database with 4 collections (Events, Users, EmailCapture, OTP) and proper indexing",
+    "RESTful API with 15+ endpoints including public and protected admin routes",
+    "Backend built with Service/Controller pattern using Express.js and MongoDB/Mongoose",
+    "Frontend built with React and 12+ reusable components (Navbar, EventCard, EmailModal, OTPModal, Dashboard)",
+    "Fully responsive design with Tailwind CSS supporting mobile, tablet, and desktop screens",
+    "Protected routes with JWT token management and localStorage persistence",
+    "API client with Axios interceptors for automatic token injection",
+    "Form validation on both client and server for email capture and OTP verification",
+    "Auto-focus and paste support in OTP input fields for better user experience",
+    "Beautiful loading states, error handling, and success notifications throughout the app",
+    "Events displayed with images, descriptions, venue details, dates, and categories",
+    "Direct redirection to original event URLs (Eventbrite/Timeout) after OTP verification",
+    "Complete event details including venue address, date/time, description, and source website",
+    "Production deployment with frontend on Netlify and backend on Render using MongoDB Atlas",
+    "Environment-based configuration for local development and production environments",
+    "CORS configuration for secure cross-origin requests between frontend and backend",
+    "Comprehensive error handling with appropriate HTTP status codes and descriptive messages",
+    "Security features including OTP one-time use, expiration, and verified flag to prevent reuse"
+  ],
+  github: "https://github.com/Mayank3847/event-scraper-project-combined.git",
+  live: "https://event-scraper-frontend.netlify.app/"
+},
+ {
+  title: "Shopping Cart Web App",
+  image: "/assets/shopping_cart.jpg",
+  tech: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT Authentication",
+    "CSS",
+    "REST API"
+  ],
+  short:
+    "Full-stack shopping cart system where users can sign up, log in, browse items, add to cart, checkout, and view order history.",
+  details: [
+    "User signup and login with JWT authentication",
+    "Single active login token per user (secure session handling)",
+    "Add items to cart and view cart contents",
+    "Checkout converts cart into an order",
+    "Order history with all past orders",
+    "Backend built with Node.js + Express.js + MongoDB",
+    "Protected routes using custom auth middleware",
+    "Frontend built in React with clean UI and plain CSS",
+    "Fully responsive user interface",
+    "Deployed backend and frontend separately on cloud",
+  ],
+  github: "https://github.com/Mayank3847/shopping-cart", 
+  live: "https://692220cedf115075551bccbc--shopping-cart-frontend-1.netlify.app/"
+},
+
+  {
   title: "TaskManager - Collaborative Task Management System",
   image: "/assets/taskmanager.jpg",
   tech: [
@@ -46,72 +172,7 @@ const projectsData = [
   github: "https://github.com/Mayank3847/task-manager-fullstack-combined.git",
   live: "https://task-manager-app-ms.netlify.app/"
 },
- {
-  title: "Shopping Cart Web App",
-  image: "/assets/shopping_cart.jpg",
-  tech: [
-    "React.js",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "JWT Authentication",
-    "CSS",
-    "REST API"
-  ],
-  short:
-    "Full-stack shopping cart system where users can sign up, log in, browse items, add to cart, checkout, and view order history.",
-  details: [
-    "User signup and login with JWT authentication",
-    "Single active login token per user (secure session handling)",
-    "Add items to cart and view cart contents",
-    "Checkout converts cart into an order",
-    "Order history with all past orders",
-    "Backend built with Node.js + Express.js + MongoDB",
-    "Protected routes using custom auth middleware",
-    "Frontend built in React with clean UI and plain CSS",
-    "Fully responsive user interface",
-    "Deployed backend and frontend separately on cloud",
-  ],
-  github: "https://github.com/Mayank3847/shopping-cart", 
-  live: "https://692220cedf115075551bccbc--shopping-cart-frontend-1.netlify.app/"
-},
-{
-  title: "GigFlow – Freelance Hiring Platform",
-  image: "/assets/gigflow.png",
-  tech: [
-    "React.js",
-    "Redux Toolkit",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "JWT Authentication",
-    "Socket.io",
-    "REST API",
-    "Tailwind CSS"
-  ],
-  short:
-    "Full-stack freelance hiring platform where clients post gigs, freelancers bid in real time, and hiring decisions trigger instant notifications.",
-  details: [
-    "User authentication with JWT and HttpOnly cookies",
-    "Role-based system: client (gig owner) and freelancer",
-    "Clients can post gigs with title, description, and budget",
-    "Freelancers can browse gigs and submit bids",
-    "Only gig owners can view bids on their posted gigs",
-    "Atomic hire logic ensures only one freelancer can be hired per gig",
-    "Hire and reject actions update gig and bid status securely",
-    "Real-time notifications using Socket.io for bids, hire, and rejection",
-    "Notification bell with unread count and persistence per user",
-    "Session-safe authentication handling on refresh and redeploy",
-    "Protected routes using custom auth middleware",
-    "Optimistic UI updates for hire/reject actions",
-    "Frontend built with React + Redux Toolkit for state management",
-    "Backend built with Node.js, Express.js, and MongoDB",
-    "Fully responsive UI with clean, production-ready design",
-    "Frontend and backend deployed separately on cloud platforms",
-  ],
-  github: "https://github.com/Mayank3847/gigflow-platform",
-  live: "https://gigflow-platform-ms7295.netlify.app"
-},
+
 
 {
     title: "Real-Time Polling Platform",
