@@ -100,37 +100,7 @@ const projectsData = [
   github: "https://github.com/Mayank3847/event-scraper-project-combined.git",
   live: "https://event-scraper-frontend.netlify.app/"
 },
- {
-  title: "Shopping Cart Web App",
-  image: "/assets/shopping_cart.jpg",
-  tech: [
-    "React.js",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "JWT Authentication",
-    "CSS",
-    "REST API"
-  ],
-  short:
-    "Full-stack shopping cart system where users can sign up, log in, browse items, add to cart, checkout, and view order history.",
-  details: [
-    "User signup and login with JWT authentication",
-    "Single active login token per user (secure session handling)",
-    "Add items to cart and view cart contents",
-    "Checkout converts cart into an order",
-    "Order history with all past orders",
-    "Backend built with Node.js + Express.js + MongoDB",
-    "Protected routes using custom auth middleware",
-    "Frontend built in React with clean UI and plain CSS",
-    "Fully responsive user interface",
-    "Deployed backend and frontend separately on cloud",
-  ],
-  github: "https://github.com/Mayank3847/shopping-cart", 
-  live: "https://692220cedf115075551bccbc--shopping-cart-frontend-1.netlify.app/"
-},
-
-  {
+{
   title: "TaskManager - Collaborative Task Management System",
   image: "/assets/taskmanager.jpg",
   tech: [
@@ -172,6 +142,122 @@ const projectsData = [
   github: "https://github.com/Mayank3847/task-manager-fullstack-combined.git",
   live: "https://task-manager-app-ms.netlify.app/"
 },
+{
+  title: "Rahul Enterprises – Fire Extinguisher Management System",
+  image: "/assets/Fire extinguisher management system logo.png",
+  tech: [
+    "React.js",
+    "React Router DOM",
+    "Node.js",
+    "Express.js",
+    "MongoDB Atlas",
+    "JWT Authentication",
+    "Nodemailer",
+    "node-cron",
+    "Recharts",
+    "REST API"
+  ],
+  short:
+    "Full-stack business management system for a fire extinguisher company — tracks customers, service history, and auto-sends Gmail refill reminders via scheduled cron jobs.",
+  details: [
+    "Owner authentication with JWT and bcrypt password hashing",
+    "Single-owner system with protected routes and session persistence",
+    "Add customers with full contact details, business info, and cylinder specifications",
+    "Track cylinder size, gas type, quantity, and serial number per customer",
+    "Set last refill date and next refill due date per customer",
+    "Automated email reminders sent to customers at 30, 7, 3, and 1 day before due date",
+    "Daily cron job runs at 9 AM and checks all customers for upcoming or overdue refills",
+    "Overdue customers trigger urgent email alerts to both customer and owner",
+    "Manual 'Send Reminder' button for instant one-click email dispatch",
+    "Complete transaction history per customer with auto-generated invoice numbers",
+    "Tracks payment mode (Cash, UPI, Bank Transfer), status (Paid, Pending), and service type",
+    "Financial summary per customer — total paid, outstanding balance, service count",
+    "Dashboard with live stats — total customers, overdue count, due-soon count, monthly revenue",
+    "Monthly revenue bar chart using Recharts with hover tooltips",
+    "Notification centre with unread count, read/unread state, and mark-all-read",
+    "Real-time notification bell badge updates every 60 seconds",
+    "Search customers by name, phone, or business name with instant filtering",
+    "Filter customer list by status — Active, Overdue, Inactive",
+    "Fully responsive UI — sidebar collapses to hamburger menu on mobile",
+    "Frontend deployed on Vercel, backend deployed on Render, database on MongoDB Atlas",
+  ],
+  github: "https://github.com/Mayank3847/rahul-enterprises-fire-Extenguisher",
+  live: "https://rahul-enterprises-frontend-ms7295.vercel.app"
+},
+{
+  title: "Vivah Studio - Wedding Services Marketplace",
+  image: "/assets/image.png",
+  tech: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "Tailwind CSS",
+    "TanStack Query",
+    "TanStack Router",
+    "JWT Authentication",
+    "React Hook Form",
+    "Framer Motion",
+    "Axios"
+  ],
+  short:
+    "Full-stack wedding services marketplace connecting couples with verified vendors, featuring search, filtering, real-time dashboards, and direct inquiry system without middlemen.",
+  details: [
+    "JWT-based authentication system with secure login, signup, and protected routes",
+    "Password hashing using bcryptjs with persistent user sessions",
+    "Marketplace with 44+ verified wedding vendors across 8 categories",
+    "Advanced search and filtering by category, city, and vendor details",
+    "Vendor detail pages with pricing, rating, and inquiry functionality",
+    "Direct vendor inquiry system with event date selection",
+    "User dashboard with saved vendors and inquiry tracking system",
+    "Bookmark/save vendors feature with quick access",
+    "Inquiry status tracking (pending, replied, closed)",
+    "Animated homepage with hero section, stats counter, and testimonials",
+    "Responsive vendor listing grid adapting from mobile to large screens",
+    "Real-time UI updates using TanStack Query for caching and syncing",
+    "Frontend built with React and Tailwind CSS with reusable component architecture",
+    "Backend built with Node.js and Express using MVC architecture",
+    "PostgreSQL database with structured schema (Users, Vendors, Categories, Inquiries, Bookmarks)",
+    "RESTful API with multiple endpoints for auth, vendors, inquiries, and users",
+    "Fully responsive design optimized from 320px to 4K screens",
+    "Deployment using Vercel (frontend), Render (backend), and Neon (PostgreSQL)",
+    "Form handling and validation using React Hook Form",
+    "Smooth animations using Framer Motion and intersection observers"
+  ],
+  github: "https://github.com/Mayank3847/wedding-website",
+  live: "https://wedding-website-one-ochre.vercel.app"
+},
+ {
+  title: "Shopping Cart Web App",
+  image: "/assets/shopping_cart.jpg",
+  tech: [
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "JWT Authentication",
+    "CSS",
+    "REST API"
+  ],
+  short:
+    "Full-stack shopping cart system where users can sign up, log in, browse items, add to cart, checkout, and view order history.",
+  details: [
+    "User signup and login with JWT authentication",
+    "Single active login token per user (secure session handling)",
+    "Add items to cart and view cart contents",
+    "Checkout converts cart into an order",
+    "Order history with all past orders",
+    "Backend built with Node.js + Express.js + MongoDB",
+    "Protected routes using custom auth middleware",
+    "Frontend built in React with clean UI and plain CSS",
+    "Fully responsive user interface",
+    "Deployed backend and frontend separately on cloud",
+  ],
+  github: "https://github.com/Mayank3847/shopping-cart", 
+  live: "https://692220cedf115075551bccbc--shopping-cart-frontend-1.netlify.app/"
+},
+
+  
 
 
 {
